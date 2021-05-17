@@ -1,0 +1,207 @@
+{
+  "openapi": "3.0.0",
+  "servers": [
+    { "url": "http://localhost:4004", "description": "", "variables": {} }
+  ],
+  "info": {
+    "version": "v1.0",
+    "title": "be-challenge",
+    "description": "",
+    "termsOfService": "",
+    "contact": {},
+    "license": { "name": "MIT" }
+  },
+  "paths": {
+    "/api/v1/video/upload": { 
+      "post": {
+        "summary": "upload video",
+        "operationId": "uploadvideo",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": ["file"],
+                "properties": {
+                  "file": { "type": "string", "format": "binary" }
+                }
+              },
+              "example": [
+                {
+                  "key": "samplefile",
+                  "type": "file",
+                  "src": "/Users/manavshrivastava/Desktop/k8s.png"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/course/60a16a9c403e7268dbe95e61": {
+      "put": {
+        "summary": "update course",
+        "operationId": "updatecourse",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "example": {
+                  "title": "course 1",
+                  "subjects": [
+                    "60a162312d94a16058f0fdd4",
+                    "60a162312d94a16058f0fdd4"
+                  ]
+                }
+              },
+              "example": "{\n    \"title\":\"course 1\",\n    \"subjects\":[\"60a162312d94a16058f0fdd4\",\n    \"60a162312d94a16058f0fdd4\"]\n}"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/subject/60a16a9c403e7268dbe95e61": {
+      "put": {
+        "summary": "update subject by subject id",
+        "operationId": "updatesubjectbysubjectid",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "example": {
+                  "title": "course 1",
+                  "subjects": [
+                    "60a162312d94a16058f0fdd4",
+                    "60a162312d94a16058f0fdd4"
+                  ]
+                }
+              },
+              "example": "{\n    \"title\":\"course 1\",\n    \"subjects\":[\"60a162312d94a16058f0fdd4\",\n    \"60a162312d94a16058f0fdd4\"]\n}"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/course": {
+      "post": {
+        "summary": "create course",
+        "operationId": "createcourse",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "example": {
+                  "title": "course 1",
+                  "subjects": [
+                    "60a162312d94a16058f0fdd4",
+                    "60a162312d94a16058f0fdd4"
+                  ]
+                }
+              },
+              "example": "{\n    \"title\":\"course 1\",\n    \"subjects\":[\"60a162312d94a16058f0fdd4\",\n    \"60a162312d94a16058f0fdd4\"]\n}"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/course/60a162312d94a16058f0fdd4": {
+      "get": {
+        "summary": "get course info by course id",
+        "operationId": "getcourseinfobycourseid",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } }
+      }
+    },
+    "/api/v1/subject/60a16faa80900e6ce6fe29e6": {
+      "get": {
+        "summary": "get subject info by subject id",
+        "operationId": "getsubjectinfobysubjectid",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } }
+      }
+    },
+    "/api/v1/course/60a161ff2d94a16058f0fdd3": {
+      "delete": {
+        "summary": "delete course info by course id",
+        "operationId": "deletecourseinfobycourseid",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } }
+      }
+    },
+    "/api/v1/subject/60a16eb180900e6ce6fe29e4": {
+      "delete": {
+        "summary": "delete subject info by subject id",
+        "operationId": "deletesubjectinfobysubjectid",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } }
+      }
+    },
+    "/api/v1/video/search": {
+      "get": {
+        "summary": "upload search",
+        "operationId": "uploadsearch",
+        "parameters": [{ "$ref": "#/components/parameters/title" }],
+        "responses": { "200": { "description": "", "headers": {} } }
+      }
+    },
+    "/api/v1/subject": {
+      "post": {
+        "summary": "create subject",
+        "operationId": "createsubject",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "example": {
+                  "title": "subbject 1",
+                  "VideoWebinars": [
+                    "60a162312d94a16058f0fdd4",
+                    "60a162312d94a16058f0fdd4"
+                  ]
+                }
+              },
+              "example": "{\n    \"title\":\"subbject 1\",\n    \"VideoWebinars\":[\"60a162312d94a16058f0fdd4\",\n    \"60a162312d94a16058f0fdd4\"]\n}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "title": {
+        "name": "title",
+        "in": "query",
+        "required": true,
+        "style": "form",
+        "schema": { "type": "string", "example": "title1" }
+      }
+    }
+  },
+  "security": [],
+  "tags": [],
+  "externalDocs": { "url": "", "description": "" },
+  "warnings": [
+    "Two GET or two POST methods for the same path are not allowed in OpenAPI specification : posthttp://localhost:4004/api/v1/video/upload"
+  ]
+}
+

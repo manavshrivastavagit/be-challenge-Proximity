@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "e028df33-c1f1-46ca-a666-4df209c51585",
+		"name": "be-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "samplefile",
+							"type": "file",
+							"src": "/Users/manavshrivastava/Desktop/k8s.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/video/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"video",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"course 1\",\n    \"subjects\":[\"60a162312d94a16058f0fdd4\",\n    \"60a162312d94a16058f0fdd4\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/course/60a16a9c403e7268dbe95e61",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"course",
+						"60a16a9c403e7268dbe95e61"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update subject by subject id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"course 1\",\n    \"subjects\":[\"60a162312d94a16058f0fdd4\",\n    \"60a162312d94a16058f0fdd4\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/subject/60a16a9c403e7268dbe95e61",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"60a16a9c403e7268dbe95e61"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"course 1\",\n    \"subjects\":[\"60a162312d94a16058f0fdd4\",\n    \"60a162312d94a16058f0fdd4\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get course info by course id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"course 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/course/60a162312d94a16058f0fdd4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"course",
+						"60a162312d94a16058f0fdd4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get subject info by subject id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"course 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/subject/60a16faa80900e6ce6fe29e6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"60a16faa80900e6ce6fe29e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete course info by course id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"course 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/course/60a161ff2d94a16058f0fdd3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"course",
+						"60a161ff2d94a16058f0fdd3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete subject info by subject id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"course 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/subject/60a16eb180900e6ce6fe29e4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"60a16eb180900e6ce6fe29e4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload webinar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "samplefile",
+							"type": "file",
+							"src": "/Users/manavshrivastava/Desktop/k8s.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/video/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"video",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "samplefile",
+							"type": "file",
+							"src": "/Users/manavshrivastava/Desktop/k8s.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/video/search?title=title1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"video",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "title1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create subject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"subbject 1\",\n    \"VideoWebinars\":[\"60a162312d94a16058f0fdd4\",\n    \"60a162312d94a16058f0fdd4\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4004/api/v1/subject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"v1",
+						"subject"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
